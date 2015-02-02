@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[AOzil]]></title>
+  <subtitle><![CDATA[世界在变]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-02-02T15:41:13.710Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[AOzil]]></name>
+    
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[通过AppleScript执行Photoshop Scripting的例子]]></title>
+    <link href="http://yoursite.com/2015/02/02/%E9%80%9A%E8%BF%87AppleScript%E6%89%A7%E8%A1%8CPhotoshop-Scripting%E7%9A%84%E4%BE%8B%E5%AD%90/"/>
+    <id>http://yoursite.com/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/</id>
+    <published>2015-02-02T15:06:43.000Z</published>
+    <updated>2015-02-02T15:16:07.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>很简单的例子</p>
+</blockquote>
+<ul>
+<li>如何启动：osascript scriptname；</li>
+<li>例子：</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Adobe Photoshop CC 2014"</span></div><div class="line">    <span class="comment">-- set theFile to alias "Application:Documents:MyFile"</span></div><div class="line">    <span class="comment">-- open theFile</span></div><div class="line">    do javascript (<span class="type">file</span> <span class="string">"filepath"</span>) <span class="keyword">with</span> arguments {<span class="number">75</span>}</div><div class="line"><span class="keyword">end</span> <span class="keyword">tell</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>带参数的例子，好东西</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function_start"><span class="keyword">on</span></span> <span class="command">run</span> (args)</div><div class="line">    <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="string">"World"</span></div><div class="line">    <span class="keyword">if</span> (<span class="command">count</span> <span class="keyword">of</span> args) &gt; <span class="number">0</span> <span class="keyword">then</span> <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="property">item</span> <span class="number">1</span> <span class="keyword">of</span> args</div><div class="line"></div><div class="line">    <span class="keyword">set</span> greeting <span class="keyword">to</span> <span class="string">"Hello, "</span> & whom & <span class="string">"!"</span></div><div class="line">    <span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Finder"</span></div><div class="line">        <span class="command">display dialog</span> greeting</div><div class="line">    <span class="keyword">end</span> <span class="keyword">tell</span></div><div class="line"><span class="keyword">end</span> <span class="command">run</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li>实际的例子</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">osascript</span> testPS.scpt <span class="string">'组 1'</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>很简单的例子</p>
+</blockquote>
+<ul>
+<li>如何启动：osascript scriptname；</li>
+<li>例子：</li>
+</ul>
+<figure class="highlight applescript"><]]>
+    </summary>
+    
+      <category term="Photoshop" scheme="http://yoursite.com/tags/Photoshop/"/>
+    
+      <category term="Scripting" scheme="http://yoursite.com/tags/Scripting/"/>
+    
+      <category term="AppleScript" scheme="http://yoursite.com/tags/AppleScript/"/>
+    
+      <category term="PhotoshopScripting" scheme="http://yoursite.com/categories/PhotoshopScripting/"/>
+    
+  </entry>
+  
+</feed>
