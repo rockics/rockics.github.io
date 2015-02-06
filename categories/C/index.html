@@ -1,88 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[AOzil]]></title>
-  <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2015-02-06T01:43:05.771Z</updated>
-  <id>http://yoursite.com/</id>
-  
-  <author>
-    <name><![CDATA[AOzil]]></name>
-    
-  </author>
-  
-  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[通过AppleScript执行Photoshop Scripting的例子]]></title>
-    <link href="http://yoursite.com/2015/02/02/%E9%80%9A%E8%BF%87AppleScript%E6%89%A7%E8%A1%8CPhotoshop-Scripting%E7%9A%84%E4%BE%8B%E5%AD%90/"/>
-    <id>http://yoursite.com/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/</id>
-    <published>2015-02-02T15:06:43.000Z</published>
-    <updated>2015-02-02T15:16:07.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>很简单的例子</p>
-</blockquote>
-<ul>
-<li>如何启动：osascript scriptname；</li>
-<li>例子：</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Adobe Photoshop CC 2014"</span></div><div class="line">    <span class="comment">-- set theFile to alias "Application:Documents:MyFile"</span></div><div class="line">    <span class="comment">-- open theFile</span></div><div class="line">    do javascript (<span class="type">file</span> <span class="string">"filepath"</span>) <span class="keyword">with</span> arguments {<span class="number">75</span>}</div><div class="line"><span class="keyword">end</span> <span class="keyword">tell</span></div></pre></td></tr></table></figure>
 
-<ul>
-<li>带参数的例子，好东西</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function_start"><span class="keyword">on</span></span> <span class="command">run</span> (args)</div><div class="line">    <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="string">"World"</span></div><div class="line">    <span class="keyword">if</span> (<span class="command">count</span> <span class="keyword">of</span> args) &gt; <span class="number">0</span> <span class="keyword">then</span> <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="property">item</span> <span class="number">1</span> <span class="keyword">of</span> args</div><div class="line"></div><div class="line">    <span class="keyword">set</span> greeting <span class="keyword">to</span> <span class="string">"Hello, "</span> & whom & <span class="string">"!"</span></div><div class="line">    <span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Finder"</span></div><div class="line">        <span class="command">display dialog</span> greeting</div><div class="line">    <span class="keyword">end</span> <span class="keyword">tell</span></div><div class="line"><span class="keyword">end</span> <span class="command">run</span></div></pre></td></tr></table></figure>
 
-<ul>
-<li>实际的例子</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">osascript</span> testPS.scpt <span class="string">'组 1'</span></div></pre></td></tr></table></figure>
-
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>很简单的例子</p>
-</blockquote>
-<ul>
-<li>如何启动：osascript scriptname；</li>
-<li>例子：</li>
-</ul>
-<figure class="highlight applescript"><]]>
-    </summary>
-    
-      <category term="Photoshop" scheme="http://yoursite.com/tags/Photoshop/"/>
-    
-      <category term="Scripting" scheme="http://yoursite.com/tags/Scripting/"/>
-    
-      <category term="AppleScript" scheme="http://yoursite.com/tags/AppleScript/"/>
-    
-      <category term="PhotoshopScripting" scheme="http://yoursite.com/categories/PhotoshopScripting/"/>
-    
-  </entry>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <entry>
-    <title><![CDATA[将字符串按照指定分隔符分割]]></title>
-    <link href="http://yoursite.com/2014/12/06/%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8C%89%E7%85%A7%E6%8C%87%E5%AE%9A%E5%88%86%E9%9A%94%E7%AC%A6%E5%88%86%E5%89%B2/"/>
-    <id>http://yoursite.com/2014/12/06/将字符串按照指定分隔符分割/</id>
-    <published>2014-12-06T01:36:58.000Z</published>
-    <updated>2015-02-06T01:43:00.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="头文件,函数定义">头文件,函数定义</h2>
+  <title>C++ | AOzil</title>
+  <meta name="author" content="AOzil">
+  
+  <meta name="description" content="AOzil的博客">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="AOzil"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="AOzil" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">AOzil</a></h1>
+  <h2><a href="/">To learn something,To contribute something and To have something fun.</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title category">C++</h2>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-12-06T01:36:58.000Z"><a href="/2014/12/06/将字符串按照指定分隔符分割/">Dec 6 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/12/06/将字符串按照指定分隔符分割/">将字符串按照指定分隔符分割</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="头文件,函数定义">头文件,函数定义</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#ifndef  __SPLIT_H_</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span>  __SPLIT_H_</span></div><div class="line"><span class="comment">//functions to split a string by a specific delimiter</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;sstream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">//thanks to Evan Teran, http://stackoverflow.com/questions/236129/how-to-split-a-string/236803#236803</span></div><div class="line"></div><div class="line"><span class="comment">//split a string on a single delimiter character (delim)</span></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>& split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems);</div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>  split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim);</div><div class="line"></div><div class="line"><span class="comment">//split a string on any character found in the string of delimiters (delims)</span></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>& split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems);</div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>  split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims);</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span>  <span class="comment">//__SPLIT_H_</span></span></div></pre></td></tr></table></figure>
 
 <h2 id="C++文件,函数实现">C++文件,函数实现</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> "split.h"</span></div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems) {</div><div class="line">    std::<span class="built_in">stringstream</span> ss(s);</div><div class="line">    std::<span class="built_in">string</span> item;</div><div class="line">    <span class="keyword">while</span>(std::getline(ss, item, delim)) {</div><div class="line">        elems.push_back(item);</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> elems;</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim) {</div><div class="line">    std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> elems;</div><div class="line">    <span class="keyword">return</span> split(s, delim, elems);</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems) {</div><div class="line">    <span class="keyword">char</span>* tok;</div><div class="line">    <span class="keyword">char</span> cchars [s.size()+<span class="number">1</span>];</div><div class="line">    <span class="keyword">char</span>* cstr = &cchars[<span class="number">0</span>];</div><div class="line">    <span class="built_in">strcpy</span>(cstr, s.c_str());</div><div class="line">    tok = strtok(cstr, delims.c_str());</div><div class="line">    <span class="keyword">while</span> (tok != NULL) {</div><div class="line">        elems.push_back(tok);</div><div class="line">        tok = strtok(NULL, delims.c_str());</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> elems;</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims) {</div><div class="line">    std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> elems;</div><div class="line">    <span class="keyword">return</span> split(s, delims, elems);</div><div class="line">}</div></pre></td></tr></table></figure>
 
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="头文件,函数定义">头文件,函数定义</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">]]>
-    </summary>
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-  </entry>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
   
-</feed>
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/C/">C++</a><small>1</small></li>
+  
+    <li><a href="/categories/PhotoshopScripting/">PhotoshopScripting</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget tag">
+<ul class="entry">
+<li>AOzil</li>
+<li>目前在互联网公司各种打杂</li>
+<li>业余和几位同学在维护<a href="http://www.7300days.com">一起读论文</a>欢迎了解.</li>
+<font color="red">一起读论文 交流群：276030889</font>
+</ul>
+</div>
+
+
+
+  <iframe width="100%" height="650" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1900965143&verifier=1c853142&dpc=1"></iframe>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of <a href="https://github.com/zippera/lightum">Lightum</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">AOzil</a> 
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+<a href="https://github.com/rockics" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
