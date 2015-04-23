@@ -83,7 +83,32 @@
         <h2 id="Brew">Brew</h2>
 <p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…<br>brew的安装方式如下:</p>
 <blockquote>
-<p>ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go/install" target="_blank" rel="external">https://raw.github.com/mxcl/homebrew/go/install</a>)”<br>brew常用选项:<br>brew install xxx<br>brew uninstall xxx<br>brew list<br>brew update xxx</p>
+<p>ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go/install" target="_blank" rel="external">https://raw.github.com/mxcl/homebrew/go/install</a>)”</p>
+</blockquote>
+<p>brew常用选项:</p>
+<blockquote>
+<p>brew install xxx<br>brew uninstall xxx<br>brew list<br>brew update xxx</p>
+<h2 id="Apache">Apache</h2>
+<p>Apache的话使用mac自带的基本就够了，我的系统是10.9，可以使用以下命令控制Apache<br>sudo apachectl start<br>sudo apachectl restart<br>sudo apachectl stop</p>
+</blockquote>
+<p>Apache的配置文件是<code>/etc/apache2/httpd.conf</code>，打开它，在末尾新增内容：</p>
+<blockquote>
+<p>DocumentRoot “/Users/username/Sites”</p>
+<p><directory><br>  Options Indexes MultiViews<br>  AllowOverride All<br>  Order allow,deny<br>  Allow from all<br></directory><br>并且，将以下配置项打开，之前是注释掉的<br>LoadModule php5_module libexec/apache2/libphp5.so</p>
+</blockquote>
+<p>这样sites目录就是网站根目录了，代码都往这个下头丢。</p>
+<h2 id="MySQL">MySQL</h2>
+<p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
+<blockquote>
+<p>brew install mysql</p>
+</blockquote>
+<p>启动命令是:</p>
+<blockquote>
+<p>mysql.server start</p>
+</blockquote>
+<p>最好给mysql设个密码，方法如下:</p>
+<blockquote>
+<p>mysqladmin -u root password ‘xxx’</p>
 </blockquote>
 
       
