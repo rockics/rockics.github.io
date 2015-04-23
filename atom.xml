@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-23T00:58:09.388Z</updated>
+  <updated>2015-04-23T01:04:21.135Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,18 @@
     <link href="http://yoursite.com/2015/04/23/Mac%E4%B8%8B%E7%94%A8brew%E6%90%AD%E5%BB%BALAMP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>http://yoursite.com/2015/04/23/Mac下用brew搭建LAMP开发环境/</id>
     <published>2015-04-23T00:13:53.000Z</published>
-    <updated>2015-04-23T00:15:14.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
+    <updated>2015-04-23T01:04:17.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Brew">Brew</h2>
+<p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…<br>brew的安装方式如下:</p>
+<blockquote>
+<p>ruby -e “$(curl -fsSL <a href="https://raw.github.com/mxcl/homebrew/go/install" target="_blank" rel="external">https://raw.github.com/mxcl/homebrew/go/install</a>)”<br>brew常用选项:<br>brew install xxx<br>brew uninstall xxx<br>brew list<br>brew update xxx</p>
+</blockquote>
+]]></content>
     <summary type="html">
-    <![CDATA[]]>
+    <![CDATA[<h2 id="Brew">Brew</h2>
+<p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…<br>brew的安装方式如下:</p>
+<blockquote>
+<p>ruby -e “$(curl -fsSL <a href="h]]>
     </summary>
     
       <category term="LAMP" scheme="http://yoursite.com/tags/LAMP/"/>
