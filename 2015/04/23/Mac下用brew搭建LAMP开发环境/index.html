@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/2 | AOzil</title>
+  <title>Mac下用brew搭建LAMP开发环境 | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Mac下用brew搭建LAMP开发环境"/>
   <meta property="og:site_name" content="AOzil"/>
 
   
@@ -47,12 +47,7 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2015/2</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -70,43 +65,49 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-02-02T15:06:43.000Z"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">Feb 2 2015</a></time>
+        <time datetime="2015-04-23T00:13:53.000Z"><a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/">Apr 23 2015</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">通过AppleScript执行Photoshop Scripting的例子</a></h1>
+    <h1 class="title">Mac下用brew搭建LAMP开发环境</h1>
   
 
     </header>
     <div class="entry">
       
-        <blockquote>
-<p>很简单的例子</p>
-</blockquote>
-<ul>
-<li>如何启动：osascript scriptname；</li>
-<li>例子：</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Adobe Photoshop CC 2014"</span></div><div class="line">    <span class="comment">-- set theFile to alias "Application:Documents:MyFile"</span></div><div class="line">    <span class="comment">-- open theFile</span></div><div class="line">    do javascript (<span class="type">file</span> <span class="string">"filepath"</span>) <span class="keyword">with</span> arguments {<span class="number">75</span>}</div><div class="line"><span class="keyword">end</span> <span class="keyword">tell</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>带参数的例子，好东西</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function_start"><span class="keyword">on</span></span> <span class="command">run</span> (args)</div><div class="line">    <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="string">"World"</span></div><div class="line">    <span class="keyword">if</span> (<span class="command">count</span> <span class="keyword">of</span> args) &gt; <span class="number">0</span> <span class="keyword">then</span> <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="property">item</span> <span class="number">1</span> <span class="keyword">of</span> args</div><div class="line"></div><div class="line">    <span class="keyword">set</span> greeting <span class="keyword">to</span> <span class="string">"Hello, "</span> & whom & <span class="string">"!"</span></div><div class="line">    <span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Finder"</span></div><div class="line">        <span class="command">display dialog</span> greeting</div><div class="line">    <span class="keyword">end</span> <span class="keyword">tell</span></div><div class="line"><span class="keyword">end</span> <span class="command">run</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>实际的例子</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">osascript</span> testPS.scpt <span class="string">'组 1'</span></div></pre></td></tr></table></figure>
-
-
+        
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/LAMP-LNMP/">LAMP/LNMP</a>
+  </div>
+
         
-      
+  
+  <div class="tags">
+    <a href="/tags/LAMP/">LAMP</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
       <div class="clearfix"></div>
     </footer>
   </div>
@@ -114,13 +115,36 @@
 
 
 
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/" class="alignright next" >Next</a>
+    
+    <div class="clearfix"></div>
 </nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
