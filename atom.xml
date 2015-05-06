@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-23T01:40:27.915Z</updated>
+  <updated>2015-05-06T14:28:39.370Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/04/23/Mac%E4%B8%8B%E7%94%A8brew%E6%90%AD%E5%BB%BALAMP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>http://yoursite.com/2015/04/23/Mac下用brew搭建LAMP开发环境/</id>
     <published>2015-04-23T00:13:53.000Z</published>
-    <updated>2015-04-23T01:28:16.000Z</updated>
+    <updated>2015-05-06T14:27:18.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>几乎是按照<a href="http://yansu.org/2013/12/11/lamp-in-mac.html" target="_blank" rel="external">Mac下用brew搭建PHP(LNMP/LAMP)开发环境</a>这篇博客操作的，原文写的很详细。这里记录一下我的操作过程。相当于笔记吧。</p>
 </blockquote>
@@ -40,7 +40,9 @@
 <p>并且，将以下配置项打开，之前是注释掉的</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module libexec/apache2/libphp5.<span class="keyword">so</span></div></pre></td></tr></table></figure>
 
-<p>这样sites目录就是网站根目录了，代码都往这个下头丢。</p>
+<p>这样sites目录就是网站根目录了，代码都往这个下头丢。<br>可以通过以下命令查看Apache的错误日志，debug阶段非常有用：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail <span class="attribute">-f</span> /<span class="keyword">private</span>/<span class="built_in">var</span>/<span class="keyword">log</span>/apache2/error_log</div></pre></td></tr></table></figure>
+
 <h2 id="MySQL">MySQL</h2>
 <p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> mysql</span></div></pre></td></tr></table></figure>

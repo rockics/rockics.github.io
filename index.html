@@ -96,7 +96,9 @@
 <p>并且，将以下配置项打开，之前是注释掉的</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module libexec/apache2/libphp5.<span class="keyword">so</span></div></pre></td></tr></table></figure>
 
-<p>这样sites目录就是网站根目录了，代码都往这个下头丢。</p>
+<p>这样sites目录就是网站根目录了，代码都往这个下头丢。<br>可以通过以下命令查看Apache的错误日志，debug阶段非常有用：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail <span class="attribute">-f</span> /<span class="keyword">private</span>/<span class="built_in">var</span>/<span class="keyword">log</span>/apache2/error_log</div></pre></td></tr></table></figure>
+
 <h2 id="MySQL">MySQL</h2>
 <p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> mysql</span></div></pre></td></tr></table></figure>
