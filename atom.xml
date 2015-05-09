@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-09T10:15:45.307Z</updated>
+  <updated>2015-05-09T10:19:08.526Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,31 +15,25 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Android学习笔记一]]></title>
+    <title><![CDATA[]]></title>
     <link href="http://yoursite.com/2015/05/09/Android%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
     <id>http://yoursite.com/2015/05/09/Android学习笔记一/</id>
-    <published>2015-05-09T10:10:14.000Z</published>
-    <updated>2015-05-09T10:15:29.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>业余时间在看郭霖大神的《第一行代码 Android》，做些笔记：</p>
+    <published>2015-05-09T10:19:07.000Z</published>
+    <updated>2015-05-09T10:19:06.000Z</updated>
+    <content type="html"><![CDATA[<p>title: Android学习笔记一<br>date: 2015-05-09 18:10:14<br>categories: Android</p>
+<h2 id="tags:_[Android][笔记]">tags: [Android][笔记]</h2>
+<blockquote>
+<p>业余时间在看郭霖大神的《第一行代码 Android》，做些笔记</p>
 </blockquote>
 <ul>
 <li>setContentView():给当前的活动加载一个布局；</li>
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p>业余时间在看郭霖大神的《第一行代码 Android》，做些笔记：</p>
-</blockquote>
-<ul>
-<li>setContentView():给当前的活动加载一个布局；</li>
-</ul>
-]]>
+    <![CDATA[<p>title: Android学习笔记一<br>date: 2015-05-09 18:10:14<br>categories: Android</p>
+<h2 id="tags:_[Android][笔记]">tags: [Android][笔记]</h2>
+<blockq]]>
     </summary>
-    
-      <category term="Android,笔记" scheme="http://yoursite.com/tags/Android-%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
   </entry>
   
