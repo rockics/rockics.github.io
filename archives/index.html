@@ -70,7 +70,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-05-09T10:19:07.000Z"><a href="/2015/05/09/Android学习笔记一/">May 9 2015</a></time>
+        <time datetime="2015-05-09T10:29:26.000Z"><a href="/2015/05/09/Android学习笔记一/">May 9 2015</a></time>
       
       
   
@@ -85,9 +85,12 @@
 <blockquote>
 <p>业余时间在看郭霖大神的《第一行代码 Android》，做些笔记</p>
 </blockquote>
-<ul>
-<li>setContentView():给当前的活动加载一个布局；</li>
-</ul>
+<p>-setContentView():给当前的活动加载一个布局;<br>-所有的活动都要在 AndroidManifest.xml 中进行注册才能生效;<br>-设定主活动:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.MAIN"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.LAUNCHER"</span> /&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>-隐藏标题栏<br>在<code>onCreate()</code>方法中加入如下代码:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">requestWindowFeature</span>(Window<span class="class">.FEATURE_NO_TITLE</span>);</div></pre></td></tr></table></figure>
+
 
       
     </div>
