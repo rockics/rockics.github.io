@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-18T00:31:44.625Z</updated>
+  <updated>2015-05-18T00:53:31.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,18 +19,18 @@
     <link href="http://yoursite.com/2015/05/18/%E4%BD%BF%E7%94%A8Scrapy-%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/05/18/使用Scrapy-安装/</id>
     <published>2015-05-18T00:26:34.000Z</published>
-    <updated>2015-05-18T00:31:41.000Z</updated>
+    <updated>2015-05-18T00:53:23.000Z</updated>
     <content type="html"><![CDATA[<ul>
-<li>首先安装pip</li>
+<li>首先安装pip<br>到一个临时目录执行一下操作：</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> easy_install pip</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//bootstrap.pypa.io/<span class="built_in">get</span>-pip.<span class="keyword">py</span></div><div class="line">sudo <span class="keyword">python</span> <span class="built_in">get</span>-pip.<span class="keyword">py</span></div></pre></td></tr></table></figure>
 
 ]]></content>
     <summary type="html">
     <![CDATA[<ul>
-<li>首先安装pip</li>
+<li>首先安装pip<br>到一个临时目录执行一下操作：</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code]]>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div cla]]>
     </summary>
     
       <category term="Scrapy" scheme="http://yoursite.com/tags/Scrapy/"/>
