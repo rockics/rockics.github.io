@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-18T00:29:19.321Z</updated>
+  <updated>2015-05-18T00:30:05.552Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,11 +19,15 @@
     <link href="http://yoursite.com/2015/05/18/%E4%BD%BF%E7%94%A8Scrapy-%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/05/18/使用Scrapy-安装/</id>
     <published>2015-05-18T00:26:34.000Z</published>
-    <updated>2015-05-18T00:29:15.000Z</updated>
-    <content type="html"><![CDATA[<p>-sudo easy_install pip</p>
+    <updated>2015-05-18T00:30:01.000Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li>sudo easy_install pip</li>
+</ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>-sudo easy_install pip</p>
+    <![CDATA[<ul>
+<li>sudo easy_install pip</li>
+</ul>
 ]]>
     </summary>
     
