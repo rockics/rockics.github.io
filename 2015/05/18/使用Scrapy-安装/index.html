@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>使用Scrapy--安装 | AOzil</title>
+  <title>使用Scrapy | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="使用Scrapy--安装"/>
+  <meta property="og:title" content="使用Scrapy"/>
   <meta property="og:site_name" content="AOzil"/>
 
   
@@ -69,13 +69,14 @@
       
       
   
-    <h1 class="title">使用Scrapy--安装</h1>
+    <h1 class="title">使用Scrapy</h1>
   
 
     </header>
     <div class="entry">
       
-        <ul>
+        <h3 id="安装">安装</h3>
+<ul>
 <li>首先安装pip<br>到一个临时目录执行一下操作：</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//bootstrap.pypa.io/<span class="built_in">get</span>-pip.<span class="keyword">py</span></div><div class="line">sudo <span class="keyword">python</span> <span class="built_in">get</span>-pip.<span class="keyword">py</span></div></pre></td></tr></table></figure>
@@ -90,6 +91,8 @@
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">scrapy</span> startproject tutorial</div></pre></td></tr></table></figure>
 
+<h3 id="使用：设置user_agent">使用：设置user agent</h3>
+<p>可以在文件<code>settings.py</code>中新增UA，更高级的防止ban策略可以考虑UA池子。暂时没有使用到。</p>
 
       
     </div>
