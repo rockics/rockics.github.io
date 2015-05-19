@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-19T00:31:16.676Z</updated>
+  <updated>2015-05-19T00:32:58.363Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/05/19/Python%E5%BC%80%E5%8F%91%E7%82%B9%E6%BB%B4/"/>
     <id>http://yoursite.com/2015/05/19/Python开发点滴/</id>
     <published>2015-05-19T00:19:35.000Z</published>
-    <updated>2015-05-19T00:30:57.000Z</updated>
+    <updated>2015-05-19T00:32:55.000Z</updated>
     <content type="html"><![CDATA[<h4 id="关于yield">关于yield</h4>
 <p>参考：<a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/" target="_blank" rel="external">Python yield 使用浅析</a><br>首先比较两段代码，都是生成斐波那契数列:</p>
 <ul>
@@ -31,7 +31,7 @@
 <ul>
 <li>使用yield的版本</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span> </div><div class="line">    n, a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></div><div class="line">    <span class="keyword">while</span> n &lt; max: </div><div class="line">        <span class="keyword">yield</span> b </div><div class="line">        <span class="comment"># print b </span></div><div class="line">        a, b = b, a + b </div><div class="line">        n = n + <span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span> </div><div class="line">    n, a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></div><div class="line">    <span class="keyword">while</span> n &lt; max: </div><div class="line">        <span class="keyword">yield</span> b </div><div class="line">        a, b = b, a + b </div><div class="line">        n = n + <span class="number">1</span></div></pre></td></tr></table></figure>
 
 <p>简单地讲，yield 的作用就是把一个函数变成一个 generator，带有 yield 的函数不再是一个普通函数，Python 解释器会将其视为一个 generator，调用 fab(5) 不会执行 fab 函数，而是返回一个 iterable 对象！在 for 循环执行时，每次循环都会执行 fab 函数内部的代码，执行到 yield b 时，fab 函数就返回一个迭代值，下次迭代时，代码从 yield b 的下一条语句继续执行，而函数的本地变量看起来和上次中断执行前是完全一样的，于是函数继续执行，直到再次遇到 yield。<br>也可以手动调用 fab(5) 的 next() 方法（因为 fab(5) 是一个 generator 对象，该对象具有 next() 方法），这样我们就可以更清楚地看到 fab 的执行流程</p>
 ]]></content>
