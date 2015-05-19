@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Scrapy | AOzil</title>
+  <title>MySQL使用笔记 | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="MySQL使用笔记"/>
   <meta property="og:site_name" content="AOzil"/>
 
   
@@ -47,12 +47,7 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Scrapy</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -70,42 +65,55 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-05-18T00:26:34.000Z"><a href="/2015/05/18/使用Scrapy-安装/">May 18 2015</a></time>
+        <time datetime="2015-05-19T08:07:06.000Z"><a href="/2015/05/19/MySQL使用笔记/">May 19 2015</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/05/18/使用Scrapy-安装/">使用Scrapy</a></h1>
+    <h1 class="title">MySQL使用笔记</h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="安装">安装</h3>
-<ul>
-<li>首先安装pip<br>到一个临时目录执行一下操作：</li>
+        <ul>
+<li>使用source导入数据库的时候，由于sql文件过大，遇到<code>ERROR 2006 (HY000): MySQL server has gone away</code>的错误，解决的办法是：</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//bootstrap.pypa.io/<span class="built_in">get</span>-pip.<span class="keyword">py</span></div><div class="line">sudo <span class="keyword">python</span> <span class="built_in">get</span>-pip.<span class="keyword">py</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">set</span> <span class="keyword">global</span> max_allowed_packet=<span class="number">128</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span></div></pre></td></tr></table></figure>
 
-<ul>
-<li>使用pip安装scrapy</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> pip install scrapy</div></pre></td></tr></table></figure>
-
-<ul>
-<li>测试Scrapy安装是否成功</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">scrapy</span> startproject tutorial</div></pre></td></tr></table></figure>
-
-<h3 id="使用：设置user_agent">使用：设置user agent</h3>
-<p>可以在文件<code>settings.py</code>中新增UA，更高级的防止ban策略可以考虑UA池子。暂时没有使用到。</p>
+<p>这行sql将MySQL允许的最大文件修改为128M；</p>
 
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/LAMP-LNMP/">LAMP/LNMP</a>
+  </div>
+
         
-      
+  
+  <div class="tags">
+    <a href="/tags/MySQL/">MySQL</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
       <div class="clearfix"></div>
     </footer>
   </div>
@@ -113,13 +121,36 @@
 
 
 
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/05/19/Python开发点滴/" class="alignright next" >Next</a>
+    
+    <div class="clearfix"></div>
 </nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN 
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+ Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

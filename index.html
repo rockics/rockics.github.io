@@ -66,6 +66,56 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-05-19T08:07:06.000Z"><a href="/2015/05/19/MySQL使用笔记/">May 19 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/05/19/MySQL使用笔记/">MySQL使用笔记</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ul>
+<li>使用source导入数据库的时候，由于sql文件过大，遇到<code>ERROR 2006 (HY000): MySQL server has gone away</code>的错误，解决的办法是：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">set</span> <span class="keyword">global</span> max_allowed_packet=<span class="number">128</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span></div></pre></td></tr></table></figure>
+
+<p>这行sql将MySQL允许的最大文件修改为128M；</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-05-19T00:19:35.000Z"><a href="/2015/05/19/Python开发点滴/">May 19 2015</a></time>
       
       
@@ -437,7 +487,7 @@
   
     <li><a href="/categories/C/">C++</a><small>1</small></li>
   
-    <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>1</small></li>
+    <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>2</small></li>
   
     <li><a href="/categories/PhotoshopScripting/">PhotoshopScripting</a><small>1</small></li>
   
