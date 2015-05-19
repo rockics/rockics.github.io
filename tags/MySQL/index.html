@@ -86,6 +86,11 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">set</span> <span class="keyword">global</span> max_allowed_packet=<span class="number">128</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span></div></pre></td></tr></table></figure>
 
 <p>这行sql将MySQL允许的最大文件修改为128M；</p>
+<ul>
+<li>将字段修改为auto_increment：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">alter</span>  <span class="keyword">table</span> info <span class="keyword">change</span> id id <span class="built_in">int</span> auto_increment;</span></div></pre></td></tr></table></figure>
+
 
       
     </div>

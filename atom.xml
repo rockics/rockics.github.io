@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-05-19T08:11:12.036Z</updated>
+  <updated>2015-05-19T08:31:24.598Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,13 +19,18 @@
     <link href="http://yoursite.com/2015/05/19/MySQL%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2015/05/19/MySQL使用笔记/</id>
     <published>2015-05-19T08:07:06.000Z</published>
-    <updated>2015-05-19T08:11:07.000Z</updated>
+    <updated>2015-05-19T08:31:21.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>使用source导入数据库的时候，由于sql文件过大，遇到<code>ERROR 2006 (HY000): MySQL server has gone away</code>的错误，解决的办法是：</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">set</span> <span class="keyword">global</span> max_allowed_packet=<span class="number">128</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span></div></pre></td></tr></table></figure>
 
 <p>这行sql将MySQL允许的最大文件修改为128M；</p>
+<ul>
+<li>将字段修改为auto_increment：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">alter</span>  <span class="keyword">table</span> info <span class="keyword">change</span> id id <span class="built_in">int</span> auto_increment;</span></div></pre></td></tr></table></figure>
+
 ]]></content>
     <summary type="html">
     <![CDATA[<ul>
