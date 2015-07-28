@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[AOzil]]></title>
-  <subtitle><![CDATA[To learn something,To contribute something and To have something fun. </br> 「這是你人生中最偉大的時刻，」泰勒說，「你卻心不在焉錯過了這一刻。」]]></subtitle>
+  <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-07-28T05:35:55.353Z</updated>
+  <updated>2015-07-28T05:39:34.607Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
