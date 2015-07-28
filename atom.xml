@@ -4,7 +4,7 @@
   <subtitle><![CDATA[To learn something,To contribute something and To have something fun.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-07-28T05:14:36.497Z</updated>
+  <updated>2015-07-28T05:16:06.575Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,14 +15,12 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[]]></title>
+    <title><![CDATA[linux配置个人工作主目录]]></title>
     <link href="http://yoursite.com/2015/07/28/linux%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E4%B8%BB%E7%9B%AE%E5%BD%95/"/>
     <id>http://yoursite.com/2015/07/28/linux配置个人工作主目录/</id>
-    <published>2015-07-28T05:13:50.000Z</published>
-    <updated>2015-07-28T05:13:49.000Z</updated>
-    <content type="html"><![CDATA[<p>title: linux配置个人工作主目录<br>date: 2015-07-28 13:05:58<br>categories: Linux</p>
-<h2 id="tags:[shell,linux]">tags:[shell,linux]</h2>
-<p>工作中，几位同事都是使用work账户登陆开发机，然后在上面进行开发。默认情况下，各种配置冲突难免。比如，如果很粗暴的使用自己的vim设置覆盖home目录的配置，其他同事就会收到影响，因此，有必要设置的工作环境，特别是工作主目录的设置。<br>做法是：</p>
+    <published>2015-07-28T05:05:58.000Z</published>
+    <updated>2015-07-28T05:16:03.000Z</updated>
+    <content type="html"><![CDATA[<p>工作中，几位同事都是使用work账户登陆开发机，然后在上面进行开发。默认情况下，各种配置冲突难免。比如，如果很粗暴的使用自己的vim设置覆盖home目录的配置，其他同事就会收到影响，因此，有必要设置的工作环境，特别是工作主目录的设置。<br>做法是：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> rockics</div><div class="line"><span class="keyword">cd</span> rockics</div><div class="line"><span class="keyword">cp</span> ../.bash_profile .</div></pre></td></tr></table></figure>
 
 <p>然后在bash_profile文件中增加如下的两行</p>
@@ -34,10 +32,15 @@
 <p>完成。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>title: linux配置个人工作主目录<br>date: 2015-07-28 13:05:58<br>categories: Linux</p>
-<h2 id="tags:[shell,linux]">tags:[shell,linux]</h2>
-<p>工作中，几位]]>
+    <![CDATA[<p>工作中，几位同事都是使用work账户登陆开发机，然后在上面进行开发。默认情况下，各种配置冲突难免。比如，如果很粗暴的使用自己的vim设置覆盖home目录的配置，其他同事就会收到影响，因此，有必要设置的工作环境，特别是工作主目录的设置。<br>做法是：</p>
+<figure]]>
     </summary>
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
   </entry>
   
