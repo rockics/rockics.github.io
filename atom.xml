@@ -4,7 +4,7 @@
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-07-28T05:39:34.607Z</updated>
+  <updated>2015-08-05T03:09:28.904Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Install and Using Boost on MacOS]]></title>
+    <link href="http://yoursite.com/2015/08/05/Install-and-Using-Boost-on-MacOS/"/>
+    <id>http://yoursite.com/2015/08/05/Install-and-Using-Boost-on-MacOS/</id>
+    <published>2015-08-05T03:05:27.000Z</published>
+    <updated>2015-08-05T03:09:19.000Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li>Install: 使用强大的brew</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> boost</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<ul>
+<li>Install: 使用强大的brew</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td ]]>
+    </summary>
+    
+      <category term="boost" scheme="http://yoursite.com/tags/boost/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[linux配置个人工作主目录]]></title>
