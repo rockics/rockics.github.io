@@ -4,7 +4,7 @@
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-14T09:49:59.134Z</updated>
+  <updated>2015-08-14T09:51:44.456Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,29 +19,25 @@
     <link href="http://yoursite.com/2015/08/14/Mac-Linux-%E5%AE%89%E8%A3%85opencv3-0%E6%93%8D%E4%BD%9C%E5%A4%87%E5%BF%98/"/>
     <id>http://yoursite.com/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/</id>
     <published>2015-08-14T09:43:21.000Z</published>
-    <updated>2015-08-14T09:49:51.000Z</updated>
+    <updated>2015-08-14T09:51:41.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
-<blockquote>
 <p>最近做起了运维的工作呀～～</p>
+</blockquote>
 <ul>
 <li>安装较高版本的cmake</li>
 </ul>
-</blockquote>
-</blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf cmake-<span class="number">3.3</span>.<span class="number">0</span>.tar.gz</div><div class="line"><span class="keyword">cd</span> cmake-<span class="number">3.3</span>.<span class="number">0</span></div><div class="line">./bootstrap</div><div class="line"><span class="keyword">make</span></div><div class="line"><span class="keyword">make</span> install</div></pre></td></tr></table></figure>
 
 <p>然后安装官方说明安装就行，遇到下载不下来的可以单独下载后在编译～～<br><a href="http://docs.opencv.org/3.0-beta/doc/tutorials/introduction/linux_install/linux_install.html" target="_blank" rel="external">OpenCV install</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
-<blockquote>
 <p>最近做起了运维的工作呀～～</p>
+</blockquote>
 <ul>
 <li>安装较高版本的cmake</li>
 </ul>
-</blockquote>
-</blockquote>
-<figure class="highlight"><table]]>
+<figure class="highlight"><table><tr><td class="gutter"><pr]]>
     </summary>
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
