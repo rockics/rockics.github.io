@@ -70,6 +70,61 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-08-14T09:43:21.000Z"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Aug 14 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Mac/Linux 安装opencv3.0操作备忘</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<blockquote>
+<p>最近做起了运维的工作呀～～</p>
+<ul>
+<li>安装较高版本的cmake</li>
+</ul>
+</blockquote>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf cmake-<span class="number">3.3</span>.<span class="number">0</span>.tar.gz</div><div class="line"><span class="keyword">cd</span> cmake-<span class="number">3.3</span>.<span class="number">0</span></div><div class="line">./bootstrap</div><div class="line"><span class="keyword">make</span></div><div class="line"><span class="keyword">make</span> install</div></pre></td></tr></table></figure>
+
+<p>然后安装官方说明安装就行，遇到下载不下来的可以单独下载后在编译～～<br><a href="http://docs.opencv.org/3.0-beta/doc/tutorials/introduction/linux_install/linux_install.html" target="_blank" rel="external">OpenCV install</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-08-14T09:15:44.000Z"><a href="/2015/08/14/升级python操作步骤/">Aug 14 2015</a></time>
       
       
@@ -582,62 +637,11 @@
 
 
   
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-06T01:36:58.000Z"><a href="/2014/12/06/将字符串按照指定分隔符分割/">Dec 6 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/06/将字符串按照指定分隔符分割/">将字符串按照指定分隔符分割</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="函数调用方式举例">函数调用方式举例</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span> myStr = <span class="string">"abc_def_ght"</span>;</div><div class="line"><span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;</span> seg_str = split(myStr, <span class="string">"_"</span>);</div></pre></td></tr></table></figure>
-
-<h2 id="头文件,函数定义">头文件,函数定义</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#ifndef  __SPLIT_H_</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span>  __SPLIT_H_</span></div><div class="line"><span class="comment">//functions to split a string by a specific delimiter</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;sstream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">//thanks to Evan Teran, http://stackoverflow.com/questions/236129/how-to-split-a-string/236803#236803</span></div><div class="line"></div><div class="line"><span class="comment">//split a string on a single delimiter character (delim)</span></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>& split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems);</div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>  split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim);</div><div class="line"></div><div class="line"><span class="comment">//split a string on any character found in the string of delimiters (delims)</span></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>& split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems);</div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span>  split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims);</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span>  <span class="comment">//__SPLIT_H_</span></span></div></pre></td></tr></table></figure>
-
-<h2 id="C++文件,函数实现">C++文件,函数实现</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> "split.h"</span></div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems) {</div><div class="line">    std::<span class="built_in">stringstream</span> ss(s);</div><div class="line">    std::<span class="built_in">string</span> item;</div><div class="line">    <span class="keyword">while</span>(std::getline(ss, item, delim)) {</div><div class="line">        elems.push_back(item);</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> elems;</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">char</span> delim) {</div><div class="line">    std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> elems;</div><div class="line">    <span class="keyword">return</span> split(s, delim, elems);</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims, std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> &elems) {</div><div class="line">    <span class="keyword">char</span>* tok;</div><div class="line">    <span class="keyword">char</span> cchars [s.size()+<span class="number">1</span>];</div><div class="line">    <span class="keyword">char</span>* cstr = &cchars[<span class="number">0</span>];</div><div class="line">    <span class="built_in">strcpy</span>(cstr, s.c_str());</div><div class="line">    tok = strtok(cstr, delims.c_str());</div><div class="line">    <span class="keyword">while</span> (tok != NULL) {</div><div class="line">        elems.push_back(tok);</div><div class="line">        tok = strtok(NULL, delims.c_str());</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> elems;</div><div class="line">}</div><div class="line"></div><div class="line">std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> split(<span class="keyword">const</span> std::<span class="built_in">string</span> &s, <span class="keyword">const</span> std::<span class="built_in">string</span>& delims) {</div><div class="line">    std::<span class="stl_container"><span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt;</span> elems;</div><div class="line">    <span class="keyword">return</span> split(s, delims, elems);</div><div class="line">}</div></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
 
   <nav id="pagination">
   
+  
+    <a href="/archives/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav>
@@ -661,7 +665,7 @@
   
     <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>2</small></li>
   
-    <li><a href="/categories/Linux/">Linux</a><small>2</small></li>
+    <li><a href="/categories/Linux/">Linux</a><small>3</small></li>
   
     <li><a href="/categories/PhotoshopScripting/">PhotoshopScripting</a><small>1</small></li>
   

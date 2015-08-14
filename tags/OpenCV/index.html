@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/7 | AOzil</title>
+  <title>OpenCV | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -48,7 +48,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2015/7</h2>
+<h2 class="archive-title tag">OpenCV</h2>
 
 
   
@@ -70,26 +70,27 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-07-28T05:05:58.000Z"><a href="/2015/07/28/linux配置个人工作主目录/">Jul 28 2015</a></time>
+        <time datetime="2015-08-14T09:43:21.000Z"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Aug 14 2015</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/07/28/linux配置个人工作主目录/">linux配置个人工作主目录</a></h1>
+    <h1 class="title"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Mac/Linux 安装opencv3.0操作备忘</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>工作中，几位同事都是使用work账户登陆开发机，然后在上面进行开发。默认情况下，各种配置冲突难免。比如，如果很粗暴的使用自己的vim设置覆盖home目录的配置，其他同事就会收到影响，因此，有必要设置的工作环境，特别是工作主目录的设置。<br>做法是：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> rockics</div><div class="line"><span class="keyword">cd</span> rockics</div><div class="line"><span class="keyword">cp</span> ../.bash_profile .</div></pre></td></tr></table></figure>
+        <blockquote>
+<blockquote>
+<p>最近做起了运维的工作呀～～</p>
+<ul>
+<li>安装较高版本的cmake</li>
+</ul>
+</blockquote>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf cmake-<span class="number">3.3</span>.<span class="number">0</span>.tar.gz</div><div class="line"><span class="keyword">cd</span> cmake-<span class="number">3.3</span>.<span class="number">0</span></div><div class="line">./bootstrap</div><div class="line"><span class="keyword">make</span></div><div class="line"><span class="keyword">make</span> install</div></pre></td></tr></table></figure>
 
-<p>然后在bash_profile文件中增加如下的两行</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HOME=<span class="regexp">/home/</span>work/rockics</div><div class="line"><span class="keyword">export</span> HOME</div></pre></td></tr></table></figure>
-
-<p>保存bash_profile，然后执行以下命令使得配置生效：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> .bash_profile</div></pre></td></tr></table></figure>
-
-<p>完成。</p>
+<p>然后安装官方说明安装就行，遇到下载不下来的可以单独下载后在编译～～<br><a href="http://docs.opencv.org/3.0-beta/doc/tutorials/introduction/linux_install/linux_install.html" target="_blank" rel="external">OpenCV install</a></p>
 
       
     </div>
