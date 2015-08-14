@@ -4,7 +4,7 @@
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-14T09:24:13.870Z</updated>
+  <updated>2015-08-14T09:29:29.228Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/08/14/%E5%8D%87%E7%BA%A7python%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/"/>
     <id>http://yoursite.com/2015/08/14/升级python操作步骤/</id>
     <published>2015-08-14T09:15:44.000Z</published>
-    <updated>2015-08-14T09:20:38.000Z</updated>
+    <updated>2015-08-14T09:29:22.000Z</updated>
     <content type="html"><![CDATA[<p>备份旧版本的python</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/bin/<span class="keyword">python</span> /root/<span class="keyword">python</span></div></pre></td></tr></table></figure>
 
@@ -32,9 +32,9 @@
 <p>使得配置生效:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
 
-<p>安装完毕后如yum不能使用<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向旧python路径，比如我之前用的是Python2.6</p>
-<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
-<p>如还是无法使用，则：<br>cp /root/python /usr/bin/python2.6<br>```</p>
+<p>安装完毕后如yum不能使用,则修改yum配置文件<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向原来的python路径，比如我之前用的是Python2.6</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
+
 ]]></content>
     <summary type="html">
     <![CDATA[<p>备份旧版本的python</p>

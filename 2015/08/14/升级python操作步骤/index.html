@@ -87,9 +87,9 @@
 <p>使得配置生效:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
 
-<p>安装完毕后如yum不能使用<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向旧python路径，比如我之前用的是Python2.6</p>
-<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
-<p>如还是无法使用，则：<br>cp /root/python /usr/bin/python2.6<br>```</p>
+<p>安装完毕后如yum不能使用,则修改yum配置文件<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向原来的python路径，比如我之前用的是Python2.6</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
+
 
       
     </div>
