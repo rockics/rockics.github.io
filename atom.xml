@@ -4,7 +4,7 @@
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-05T03:09:28.904Z</updated>
+  <updated>2015-08-14T09:24:13.870Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,41 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[升级python操作步骤]]></title>
+    <link href="http://yoursite.com/2015/08/14/%E5%8D%87%E7%BA%A7python%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://yoursite.com/2015/08/14/升级python操作步骤/</id>
+    <published>2015-08-14T09:15:44.000Z</published>
+    <updated>2015-08-14T09:20:38.000Z</updated>
+    <content type="html"><![CDATA[<p>备份旧版本的python</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/bin/<span class="keyword">python</span> /root/<span class="keyword">python</span></div></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tar zxvf Python-<span class="number">2.7</span>.<span class="number">1</span>.tgz</div><div class="line">cd Python-<span class="number">2.7</span>.<span class="number">1</span></div><div class="line">.<span class="regexp">/configure --prefix=/</span>usr<span class="regexp">/lib/</span>python2.<span class="number">7</span> --with-threads --enable-shared</div><div class="line">make;make install</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python /</span>usr<span class="regexp">/bin/</span>python</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span></div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib<span class="regexp">/libpython2.7.so.1.0 /</span>usr<span class="regexp">/lib/</span></div></pre></td></tr></table></figure>
+
+<p>修改文件<code>/etc/ld.so.conf</code>，新增一行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib</div></pre></td></tr></table></figure>
+
+<p>使得配置生效:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
+
+<p>安装完毕后如yum不能使用<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向旧python路径，比如我之前用的是Python2.6</p>
+<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
+<p>如还是无法使用，则：<br>cp /root/python /usr/bin/python2.6<br>```</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>备份旧版本的python</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Install and Using Boost on MacOS]]></title>

@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>AppleScript | AOzil</title>
+  <title>升级python操作步骤 | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="升级python操作步骤"/>
   <meta property="og:site_name" content="AOzil"/>
 
   
@@ -47,12 +47,7 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">AppleScript</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -70,43 +65,64 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-02-02T15:06:43.000Z"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">Feb 2 2015</a></time>
+        <time datetime="2015-08-14T09:15:44.000Z"><a href="/2015/08/14/升级python操作步骤/">Aug 14 2015</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">通过AppleScript执行Photoshop Scripting的例子</a></h1>
+    <h1 class="title">升级python操作步骤</h1>
   
 
     </header>
     <div class="entry">
       
-        <blockquote>
-<p>很简单的例子</p>
-</blockquote>
-<ul>
-<li>如何启动：osascript scriptname；</li>
-<li>例子：</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Adobe Photoshop CC 2014"</span></div><div class="line">    <span class="comment">-- set theFile to alias "Application:Documents:MyFile"</span></div><div class="line">    <span class="comment">-- open theFile</span></div><div class="line">    do javascript (<span class="type">file</span> <span class="string">"filepath"</span>) <span class="keyword">with</span> arguments {<span class="number">75</span>}</div><div class="line"><span class="keyword">end</span> <span class="keyword">tell</span></div></pre></td></tr></table></figure>
+        <p>备份旧版本的python</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/bin/<span class="keyword">python</span> /root/<span class="keyword">python</span></div></pre></td></tr></table></figure>
 
-<ul>
-<li>带参数的例子，好东西</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function_start"><span class="keyword">on</span></span> <span class="command">run</span> (args)</div><div class="line">    <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="string">"World"</span></div><div class="line">    <span class="keyword">if</span> (<span class="command">count</span> <span class="keyword">of</span> args) &gt; <span class="number">0</span> <span class="keyword">then</span> <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="property">item</span> <span class="number">1</span> <span class="keyword">of</span> args</div><div class="line"></div><div class="line">    <span class="keyword">set</span> greeting <span class="keyword">to</span> <span class="string">"Hello, "</span> & whom & <span class="string">"!"</span></div><div class="line">    <span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Finder"</span></div><div class="line">        <span class="command">display dialog</span> greeting</div><div class="line">    <span class="keyword">end</span> <span class="keyword">tell</span></div><div class="line"><span class="keyword">end</span> <span class="command">run</span></div></pre></td></tr></table></figure>
+<p>安装</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tar zxvf Python-<span class="number">2.7</span>.<span class="number">1</span>.tgz</div><div class="line">cd Python-<span class="number">2.7</span>.<span class="number">1</span></div><div class="line">.<span class="regexp">/configure --prefix=/</span>usr<span class="regexp">/lib/</span>python2.<span class="number">7</span> --with-threads --enable-shared</div><div class="line">make;make install</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python /</span>usr<span class="regexp">/bin/</span>python</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span></div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib<span class="regexp">/libpython2.7.so.1.0 /</span>usr<span class="regexp">/lib/</span></div></pre></td></tr></table></figure>
 
-<ul>
-<li>实际的例子</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">osascript</span> testPS.scpt <span class="string">'组 1'</span></div></pre></td></tr></table></figure>
+<p>修改文件<code>/etc/ld.so.conf</code>，新增一行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib</div></pre></td></tr></table></figure>
 
+<p>使得配置生效:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
+
+<p>安装完毕后如yum不能使用<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向旧python路径，比如我之前用的是Python2.6</p>
+<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
+<p>如还是无法使用，则：<br>cp /root/python /usr/bin/python2.6<br>```</p>
 
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/Linux/">Linux</a>
+  </div>
+
         
-      
+  
+  <div class="tags">
+    <a href="/tags/Linux/">Linux</a>, <a href="/tags/Python/">Python</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
       <div class="clearfix"></div>
     </footer>
   </div>
@@ -114,13 +130,36 @@
 
 
 
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/08/05/Install-and-Using-Boost-on-MacOS/" class="alignright next" >Next</a>
+    
+    <div class="clearfix"></div>
 </nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN 
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+ Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

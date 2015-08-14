@@ -70,6 +70,65 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-08-14T09:15:44.000Z"><a href="/2015/08/14/升级python操作步骤/">Aug 14 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/14/升级python操作步骤/">升级python操作步骤</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>备份旧版本的python</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/bin/<span class="keyword">python</span> /root/<span class="keyword">python</span></div></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tar zxvf Python-<span class="number">2.7</span>.<span class="number">1</span>.tgz</div><div class="line">cd Python-<span class="number">2.7</span>.<span class="number">1</span></div><div class="line">.<span class="regexp">/configure --prefix=/</span>usr<span class="regexp">/lib/</span>python2.<span class="number">7</span> --with-threads --enable-shared</div><div class="line">make;make install</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python /</span>usr<span class="regexp">/bin/</span>python</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span></div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib<span class="regexp">/libpython2.7.so.1.0 /</span>usr<span class="regexp">/lib/</span></div></pre></td></tr></table></figure>
+
+<p>修改文件<code>/etc/ld.so.conf</code>，新增一行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib</div></pre></td></tr></table></figure>
+
+<p>使得配置生效:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
+
+<p>安装完毕后如yum不能使用<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向旧python路径，比如我之前用的是Python2.6</p>
+<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
+<p>如还是无法使用，则：<br>cp /root/python /usr/bin/python2.6<br>```</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-07-28T05:05:58.000Z"><a href="/2015/07/28/linux配置个人工作主目录/">Jul 28 2015</a></time>
       
       
@@ -132,7 +191,7 @@
   
     <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>2</small></li>
   
-    <li><a href="/categories/Linux/">Linux</a><small>1</small></li>
+    <li><a href="/categories/Linux/">Linux</a><small>2</small></li>
   
     <li><a href="/categories/PhotoshopScripting/">PhotoshopScripting</a><small>1</small></li>
   
