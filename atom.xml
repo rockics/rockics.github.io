@@ -4,7 +4,7 @@
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-14T09:51:44.456Z</updated>
+  <updated>2015-08-17T14:01:28.823Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CNN学习]]></title>
+    <link href="http://yoursite.com/2015/08/14/CNN%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2015/08/14/CNN学习/</id>
+    <published>2015-08-14T09:57:17.000Z</published>
+    <updated>2015-08-17T14:01:20.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="相关的资料">相关的资料</h3>
+<ul>
+<li><a href="http://cs231n.github.io/neural-networks-1/" target="_blank" rel="external">CS231n Convolutional Neural Networks for Visual Recognition</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="相关的资料">相关的资料</h3>
+<ul>
+<li><a href="http://cs231n.github.io/neural-networks-1/" target="_blank" rel="external">CS231n Convolutional ]]>
+    </summary>
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+      <category term="ML/DM" scheme="http://yoursite.com/categories/ML-DM/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Mac/Linux 安装opencv3.0操作备忘]]></title>
