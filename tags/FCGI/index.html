@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Linux | AOzil</title>
+  <title>FCGI | AOzil</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -48,7 +48,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title category">Linux</h2>
+<h2 class="archive-title tag">FCGI</h2>
 
 
   
@@ -96,172 +96,6 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nginx -<span class="keyword">c</span> /home/aozil/test/nginx_fcgi/nginx.<span class="keyword">conf</span> </div><div class="line">spawn-fcgi -<span class="keyword">p</span> <span class="number">8000</span> -<span class="keyword">n</span> hello_world</div></pre></td></tr></table></figure>
 
 <p>浏览器访问，看看效果<br><a href="http://localhost:8097" target="_blank" rel="external">localhost</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-14T09:43:21.000Z"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Aug 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/14/Mac-Linux-安装opencv3-0操作备忘/">Mac/Linux 安装opencv3.0操作备忘</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>最近做起了运维的工作呀～～</p>
-</blockquote>
-<ul>
-<li>安装较高版本的cmake</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf cmake-<span class="number">3.3</span>.<span class="number">0</span>.tar.gz</div><div class="line"><span class="keyword">cd</span> cmake-<span class="number">3.3</span>.<span class="number">0</span></div><div class="line">./bootstrap</div><div class="line"><span class="keyword">make</span></div><div class="line"><span class="keyword">make</span> install</div></pre></td></tr></table></figure>
-
-<p>然后安装官方说明安装就行，遇到下载不下来的可以单独下载后在编译～～<br><a href="http://docs.opencv.org/3.0-beta/doc/tutorials/introduction/linux_install/linux_install.html" target="_blank" rel="external">OpenCV install</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-14T09:15:44.000Z"><a href="/2015/08/14/升级python操作步骤/">Aug 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/14/升级python操作步骤/">升级python操作步骤</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>备份旧版本的python</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/bin/<span class="keyword">python</span> /root/<span class="keyword">python</span></div></pre></td></tr></table></figure>
-
-<p>安装</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tar zxvf Python-<span class="number">2.7</span>.<span class="number">1</span>.tgz</div><div class="line">cd Python-<span class="number">2.7</span>.<span class="number">1</span></div><div class="line">.<span class="regexp">/configure --prefix=/</span>usr<span class="regexp">/lib/</span>python2.<span class="number">7</span> --with-threads --enable-shared</div><div class="line">make;make install</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python /</span>usr<span class="regexp">/bin/</span>python</div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span></div><div class="line">cp <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib<span class="regexp">/libpython2.7.so.1.0 /</span>usr<span class="regexp">/lib/</span></div></pre></td></tr></table></figure>
-
-<p>修改文件<code>/etc/ld.so.conf</code>，新增一行</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>lib</div></pre></td></tr></table></figure>
-
-<p>使得配置生效:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">ldconfig</span> -v</div></pre></td></tr></table></figure>
-
-<p>安装完毕后如yum不能使用,则修改yum配置文件<br>vi /usr/lib/yum<br>第一句#!/usr/bin/python 指向原来的python路径，比如我之前用的是Python2.6</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/usr/bin/python2.6</span></div></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-07-28T05:05:58.000Z"><a href="/2015/07/28/linux配置个人工作主目录/">Jul 28 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/07/28/linux配置个人工作主目录/">linux配置个人工作主目录</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>工作中，几位同事都是使用work账户登陆开发机，然后在上面进行开发。默认情况下，各种配置冲突难免。比如，如果很粗暴的使用自己的vim设置覆盖home目录的配置，其他同事就会收到影响，因此，有必要设置的工作环境，特别是工作主目录的设置。<br>做法是：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> rockics</div><div class="line"><span class="keyword">cd</span> rockics</div><div class="line"><span class="keyword">cp</span> ../.bash_profile .</div></pre></td></tr></table></figure>
-
-<p>然后在bash_profile文件中增加如下的两行</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HOME=<span class="regexp">/home/</span>work/rockics</div><div class="line"><span class="keyword">export</span> HOME</div></pre></td></tr></table></figure>
-
-<p>保存bash_profile，然后执行以下命令使得配置生效：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> .bash_profile</div></pre></td></tr></table></figure>
-
-<p>完成。</p>
 
       
     </div>

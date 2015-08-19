@@ -70,6 +70,83 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-04-23T00:13:53.000Z"><a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/">Apr 23 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/">Mac下用brew搭建LAMP开发环境</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>几乎是按照<a href="http://yansu.org/2013/12/11/lamp-in-mac.html" target="_blank" rel="external">Mac下用brew搭建PHP(LNMP/LAMP)开发环境</a>这篇博客操作的，原文写的很详细。这里记录一下我的操作过程。相当于笔记吧。</p>
+</blockquote>
+<h2 id="Brew">Brew</h2>
+<p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…<br>brew的安装方式如下:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)</span>"</span></div></pre></td></tr></table></figure>
+
+<p>brew常用选项:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> xxx</span></div><div class="line">brew <span class="keyword">uninstall</span> xxx</div><div class="line">brew list </div><div class="line">brew <span class="keyword">update</span> xxx</div></pre></td></tr></table></figure>
+
+<h2 id="Apache">Apache</h2>
+<p>Apache的话使用mac自带的基本就够了，我的系统是10.9，可以使用以下命令控制Apache</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apachectl start</div><div class="line"><span class="built_in">sudo</span> apachectl restart</div><div class="line"><span class="built_in">sudo</span> apachectl stop</div></pre></td></tr></table></figure>
+
+<p>Apache的配置文件是<code>/etc/apache2/httpd.conf</code>，打开它，在末尾新增内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword"><span class="common">DocumentRoot</span></span> <span class="string">"/Users/username/Sites"</span></div><div class="line"><span class="tag">&lt;Directory /&gt;</span></div><div class="line">   <span class="keyword"><span class="common">Options</span></span> Indexes MultiViews</div><div class="line">   <span class="keyword">AllowOverride</span> <span class="literal">All</span></div><div class="line">   <span class="keyword"><span class="common">Order</span></span> allow,deny</div><div class="line">   <span class="keyword"><span class="common">Allow</span></span> from <span class="literal">all</span></div><div class="line"><span class="tag">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
+
+<p>并且，将以下配置项打开，之前是注释掉的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module libexec/apache2/libphp5.<span class="keyword">so</span></div></pre></td></tr></table></figure>
+
+<p>这样sites目录就是网站根目录了，代码都往这个下头丢。<br>可以通过以下命令查看Apache的错误日志，debug阶段非常有用：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail <span class="attribute">-f</span> /<span class="keyword">private</span>/<span class="built_in">var</span>/<span class="keyword">log</span>/apache2/error_log</div></pre></td></tr></table></figure>
+
+<h2 id="MySQL">MySQL</h2>
+<p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> mysql</span></div></pre></td></tr></table></figure>
+
+<p>启动命令是:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql.server <span class="operator"><span class="keyword">start</span></span></div></pre></td></tr></table></figure>
+
+<p>最好给mysql设个密码，方法如下:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">mysqladmin</span> -u root password <span class="string">'xxx'</span></div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-02-02T15:06:43.000Z"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">Feb 2 2015</a></time>
       
       
@@ -143,7 +220,7 @@
   
     <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>2</small></li>
   
-    <li><a href="/categories/Linux/">Linux</a><small>3</small></li>
+    <li><a href="/categories/Linux/">Linux</a><small>4</small></li>
   
     <li><a href="/categories/ML-DM/">ML/DM</a><small>1</small></li>
   

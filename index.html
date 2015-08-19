@@ -66,6 +66,66 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-08-19T09:23:25.000Z"><a href="/2015/08/19/CentOS-安装配置Nginx-FCGI/">Aug 19 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/19/CentOS-安装配置Nginx-FCGI/">CentOS 安装配置Nginx+FCGI</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>参考的文章：<a href="http://chriswu.me/blog/writing-hello-world-in-fcgi-with-c-plus-plus/" target="_blank" rel="external">Writing Hello World in FCGI with C++</a><br>root权限安装spawn-fcgi和libfcgi-dev，这样多用户都可以使用这些基本的库：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum <span class="operator"><span class="keyword">install</span> fcgi-devel</span></div><div class="line">yum <span class="keyword">install</span> spawn-fcgi</div></pre></td></tr></table></figure>
+
+<p>安装很顺利，完成之后，切换到个人用户。编写如下的cpp代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> "fcgio.h"</span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">void</span>) {</div><div class="line">    streambuf * cin_streambuf  = <span class="built_in">cin</span>.rdbuf();</div><div class="line">    streambuf * cout_streambuf = <span class="built_in">cout</span>.rdbuf();</div><div class="line">    streambuf * cerr_streambuf = <span class="built_in">cerr</span>.rdbuf();</div><div class="line"></div><div class="line">    FCGX_Request request;</div><div class="line"></div><div class="line">    FCGX_Init();</div><div class="line">    FCGX_InitRequest(&request, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (FCGX_Accept_r(&request) == <span class="number">0</span>) {</div><div class="line">        fcgi_streambuf cin_fcgi_streambuf(request.in);</div><div class="line">        fcgi_streambuf cout_fcgi_streambuf(request.out);</div><div class="line">        fcgi_streambuf cerr_fcgi_streambuf(request.err);</div><div class="line"></div><div class="line">        <span class="built_in">cin</span>.rdbuf(&cin_fcgi_streambuf);</div><div class="line">        <span class="built_in">cout</span>.rdbuf(&cout_fcgi_streambuf);</div><div class="line">        <span class="built_in">cerr</span>.rdbuf(&cerr_fcgi_streambuf);</div><div class="line"></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Content-type: text/html\r\n"</span></div><div class="line">            &lt;&lt; <span class="string">"\r\n"</span></div><div class="line">            &lt;&lt; <span class="string">"&lt;html&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"  &lt;head&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"    &lt;title&gt;Hello, World!&lt;/title&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"  &lt;/head&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"  &lt;body&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"    &lt;h1&gt;Hello, World!&lt;/h1&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"  &lt;/body&gt;\n"</span></div><div class="line">            &lt;&lt; <span class="string">"&lt;/html&gt;\n"</span>;</div><div class="line"></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="built_in">cin</span>.rdbuf(cin_streambuf);</div><div class="line">    <span class="built_in">cout</span>.rdbuf(cout_streambuf);</div><div class="line">    <span class="built_in">cerr</span>.rdbuf(cerr_streambuf);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>使用命令编译它：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">main_v1</span><span class="string">.</span><span class="comment">cpp</span> <span class="literal">-</span><span class="comment">lfcgi</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">lfcgi</span> <span class="literal">-</span><span class="comment">o</span> <span class="comment">hello_world</span></div></pre></td></tr></table></figure>
+
+<p>Nginx的安装之前root账户已经完成，因此这个时候可以省去安装了。<br>在当前目录下，创建一个新的nginx配置文件，内容如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">pid pidpath;(此处请注意替换)</div><div class="line">events {</div><div class="line">    worker_connections <span class="number">1024</span>;</div><div class="line">}</div><div class="line"></div><div class="line">http {</div><div class="line">    server {</div><div class="line">        <span class="keyword">listen</span> <span class="number">8097</span>;</div><div class="line">        server_name localhost;</div><div class="line"></div><div class="line">        location / {</div><div class="line">            fastcgi_pass   <span class="number">127.0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">8000</span>;</div><div class="line"></div><div class="line">            fastcgi_param  GATEWAY_INTERFACE  CGI/<span class="number">1.1</span>;</div><div class="line">            fastcgi_param  SERVER_SOFTWARE    nginx;</div><div class="line">            fastcgi_param  QUERY_STRING       <span class="variable">$query_string</span>;</div><div class="line">            fastcgi_param  REQUEST_METHOD     <span class="variable">$request_method</span>;</div><div class="line">            fastcgi_param  CONTENT_TYPE       <span class="variable">$content_type</span>;</div><div class="line">            fastcgi_param  CONTENT_LENGTH     <span class="variable">$content_length</span>;</div><div class="line">            fastcgi_param  SCRIPT_FILENAME    <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</div><div class="line">            fastcgi_param  SCRIPT_NAME        <span class="variable">$fastcgi_script_name</span>;</div><div class="line">            fastcgi_param  REQUEST_URI        <span class="variable">$request_uri</span>;</div><div class="line">            fastcgi_param  DOCUMENT_URI       <span class="variable">$document_uri</span>;</div><div class="line">            fastcgi_param  DOCUMENT_ROOT      <span class="variable">$document_root</span>;</div><div class="line">            fastcgi_param  SERVER_PROTOCOL    <span class="variable">$server_protocol</span>;</div><div class="line">            fastcgi_param  REMOTE_ADDR        <span class="variable">$remote_addr</span>;</div><div class="line">            fastcgi_param  REMOTE_PORT        <span class="variable">$remote_port</span>;</div><div class="line">            fastcgi_param  SERVER_ADDR        <span class="variable">$server_addr</span>;</div><div class="line">            fastcgi_param  SERVER_PORT        <span class="variable">$server_port</span>;</div><div class="line">            fastcgi_param  SERVER_NAME        <span class="variable">$server_name</span>;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>启动nginx和spawn-fcgi</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nginx -<span class="keyword">c</span> /home/aozil/test/nginx_fcgi/nginx.<span class="keyword">conf</span> </div><div class="line">spawn-fcgi -<span class="keyword">p</span> <span class="number">8000</span> -<span class="keyword">n</span> hello_world</div></pre></td></tr></table></figure>
+
+<p>浏览器访问，看看效果<br><a href="http://localhost:8097" target="_blank" rel="external">localhost</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-08-14T09:57:17.000Z"><a href="/2015/08/14/CNN学习/">Aug 14 2015</a></time>
       
       
@@ -547,83 +607,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-04-23T00:13:53.000Z"><a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/">Apr 23 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/">Mac下用brew搭建LAMP开发环境</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>几乎是按照<a href="http://yansu.org/2013/12/11/lamp-in-mac.html" target="_blank" rel="external">Mac下用brew搭建PHP(LNMP/LAMP)开发环境</a>这篇博客操作的，原文写的很详细。这里记录一下我的操作过程。相当于笔记吧。</p>
-</blockquote>
-<h2 id="Brew">Brew</h2>
-<p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…<br>brew的安装方式如下:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)</span>"</span></div></pre></td></tr></table></figure>
-
-<p>brew常用选项:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> xxx</span></div><div class="line">brew <span class="keyword">uninstall</span> xxx</div><div class="line">brew list </div><div class="line">brew <span class="keyword">update</span> xxx</div></pre></td></tr></table></figure>
-
-<h2 id="Apache">Apache</h2>
-<p>Apache的话使用mac自带的基本就够了，我的系统是10.9，可以使用以下命令控制Apache</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apachectl start</div><div class="line"><span class="built_in">sudo</span> apachectl restart</div><div class="line"><span class="built_in">sudo</span> apachectl stop</div></pre></td></tr></table></figure>
-
-<p>Apache的配置文件是<code>/etc/apache2/httpd.conf</code>，打开它，在末尾新增内容：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword"><span class="common">DocumentRoot</span></span> <span class="string">"/Users/username/Sites"</span></div><div class="line"><span class="tag">&lt;Directory /&gt;</span></div><div class="line">   <span class="keyword"><span class="common">Options</span></span> Indexes MultiViews</div><div class="line">   <span class="keyword">AllowOverride</span> <span class="literal">All</span></div><div class="line">   <span class="keyword"><span class="common">Order</span></span> allow,deny</div><div class="line">   <span class="keyword"><span class="common">Allow</span></span> from <span class="literal">all</span></div><div class="line"><span class="tag">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
-
-<p>并且，将以下配置项打开，之前是注释掉的</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module libexec/apache2/libphp5.<span class="keyword">so</span></div></pre></td></tr></table></figure>
-
-<p>这样sites目录就是网站根目录了，代码都往这个下头丢。<br>可以通过以下命令查看Apache的错误日志，debug阶段非常有用：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail <span class="attribute">-f</span> /<span class="keyword">private</span>/<span class="built_in">var</span>/<span class="keyword">log</span>/apache2/error_log</div></pre></td></tr></table></figure>
-
-<h2 id="MySQL">MySQL</h2>
-<p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew <span class="operator"><span class="keyword">install</span> mysql</span></div></pre></td></tr></table></figure>
-
-<p>启动命令是:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql.server <span class="operator"><span class="keyword">start</span></span></div></pre></td></tr></table></figure>
-
-<p>最好给mysql设个密码，方法如下:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">mysqladmin</span> -u root password <span class="string">'xxx'</span></div></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -651,7 +634,7 @@
   
     <li><a href="/categories/LAMP-LNMP/">LAMP/LNMP</a><small>2</small></li>
   
-    <li><a href="/categories/Linux/">Linux</a><small>3</small></li>
+    <li><a href="/categories/Linux/">Linux</a><small>4</small></li>
   
     <li><a href="/categories/ML-DM/">ML/DM</a><small>1</small></li>
   
