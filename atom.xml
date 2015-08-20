@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Rockics]]></title>
+  <title><![CDATA[想做R的D]]></title>
   <subtitle><![CDATA[「这是你人生中最伟大的时刻，」泰勒说，「你却心不在焉错过了这一刻。」]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-20T00:30:42.815Z</updated>
+  <updated>2015-08-20T00:38:18.286Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name><![CDATA[Rockics]]></name>
+    <name><![CDATA[AOzil]]></name>
     
   </author>
   
