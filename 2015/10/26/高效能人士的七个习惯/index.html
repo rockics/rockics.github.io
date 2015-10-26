@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>通过AppleScript执行Photoshop Scripting的例子 | 想做R的D</title>
+  <title>高效能人士的七个习惯 | 想做R的D</title>
   <meta name="author" content="AOzil">
   
   <meta name="description" content="AOzil的博客">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="通过AppleScript执行Photoshop Scripting的例子"/>
+  <meta property="og:title" content="高效能人士的七个习惯"/>
   <meta property="og:site_name" content="想做R的D"/>
 
   
@@ -65,35 +65,22 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-02-02T15:06:43.000Z"><a href="/2015/02/02/通过AppleScript执行Photoshop-Scripting的例子/">Feb 2 2015</a></time>
+        <time datetime="2015-10-26T14:43:20.000Z"><a href="/2015/10/26/高效能人士的七个习惯/">Oct 26 2015</a></time>
       
       
   
-    <h1 class="title">通过AppleScript执行Photoshop Scripting的例子</h1>
+    <h1 class="title">高效能人士的七个习惯</h1>
   
 
     </header>
     <div class="entry">
       
-        <blockquote>
-<p>很简单的例子</p>
+        <ul>
+<li>P25<blockquote>
+<p>品德成功论提醒人们，高效能的生活是有基本原则的，只有当人们学会并遵循这些原则，把它们融入到自己的品德中去，才能享受真正的成功与恒久的幸福。</p>
 </blockquote>
-<ul>
-<li>如何启动：osascript scriptname；</li>
-<li>例子：</li>
+</li>
 </ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Adobe Photoshop CC 2014"</span></div><div class="line">    <span class="comment">-- set theFile to alias "Application:Documents:MyFile"</span></div><div class="line">    <span class="comment">-- open theFile</span></div><div class="line">    do javascript (<span class="type">file</span> <span class="string">"filepath"</span>) <span class="keyword">with</span> arguments {<span class="number">75</span>}</div><div class="line"><span class="keyword">end</span> <span class="keyword">tell</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>带参数的例子，好东西</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function_start"><span class="keyword">on</span></span> <span class="command">run</span> (args)</div><div class="line">    <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="string">"World"</span></div><div class="line">    <span class="keyword">if</span> (<span class="command">count</span> <span class="keyword">of</span> args) &gt; <span class="number">0</span> <span class="keyword">then</span> <span class="keyword">set</span> whom <span class="keyword">to</span> <span class="property">item</span> <span class="number">1</span> <span class="keyword">of</span> args</div><div class="line"></div><div class="line">    <span class="keyword">set</span> greeting <span class="keyword">to</span> <span class="string">"Hello, "</span> & whom & <span class="string">"!"</span></div><div class="line">    <span class="keyword">tell</span> <span class="type">application</span> <span class="string">"Finder"</span></div><div class="line">        <span class="command">display dialog</span> greeting</div><div class="line">    <span class="keyword">end</span> <span class="keyword">tell</span></div><div class="line"><span class="keyword">end</span> <span class="command">run</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li>实际的例子</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">osascript</span> testPS.scpt <span class="string">'组 1'</span></div></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -102,13 +89,13 @@
         
   
   <div class="categories">
-    <a href="/categories/PhotoshopScripting/">PhotoshopScripting</a>
+    <a href="/categories/书摘/">书摘</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/Photoshop/">Photoshop</a>, <a href="/tags/Scripting/">Scripting</a>, <a href="/tags/AppleScript/">AppleScript</a>
+    <a href="/tags/自我管理/">自我管理</a>, <a href="/tags/效率/">效率</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -136,10 +123,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
-    <a href="/2015/04/23/Mac下用brew搭建LAMP开发环境/" class="alignleft prev" >Prev</a>
     
-    
-    <a href="/2014/12/06/将字符串按照指定分隔符分割/" class="alignright next" >Next</a>
+    <a href="/2015/08/19/CentOS-安装配置Nginx-FCGI/" class="alignright next" >Next</a>
     
     <div class="clearfix"></div>
 </nav>
